@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Application page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="userView.css">
+	<script src="../Controller/userView.js"></script>
+    <script src="../Controller/recipes.js"></script>
+</head>
+
+<body onload="checkSession()">
+
+    <div id = "pageLoaded">
+        <h1>Calendar</h1>
+        <br>
+        <br>
+        <div class="table-responsive table-fixed">
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td id="total-breakfast"></td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td id="total-lunch"></td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td class="data-calendar"><p class="data-recipe-selected">Total kcal: <span class="total-kcal"> 0 </span></br>Total proteins: <span class="total-proteins"> 0 </span></br>Total fat: <span class="total-fat"> 0 </span></br>Total carbohydrates: <span class="total-carbohydrates"> 0 </span></p></td>
+                    <td id="total-dinner"></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total-monday"></td>
+                    <td id="total-tuesday"></td>
+                    <td id="total-wednesday"></td>
+                    <td id="total-thursday"></td>
+                    <td id="total-friday"></td>
+                    <td id="total-saturday"></td>
+                    <td id="total-sunday"></td>
+                    <td id="total-calendar"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Llamamos a nuestro método de JS para rellenar nuestro calendario -->
+        <script>fillCalendarOptions()</script>
+
+        <div class="container" id="buttonsCalendarContainer">
+            <div class="row justify-content-md-center">
+                <div class="col divButtons">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addRecipe" onclick="showModalAddRecipe()">
+                        Add recipe
+                    </button>
+                </div>
+                <div class="col divButtons">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#showRecipes" onclick="showRecipes()">
+                        Show recipes
+                    </button>
+                </div>
+                <div class="col divButtons">
+                    <button type="button" class="btn btn-primary" onclick="calculateTotalValues()">Calculate Nutritional Values</button>
+                </div>
+                <div class="col divButtons">
+                    <button type="button" class="btn btn-primary" onclick="saveCalendarRecipes()">Save Calendar</button>
+                </div>
+                <div class="col divButtons">
+                    <button type="button" class="btn btn-primary" onclick="closeSession()">Close session</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para añadir recetas -->
+        <div class="modal fade" id="addRecipe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add recipes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body" id="modalRecipe">
+                        <div class="container-fluid" id="containerModalAddRecipe">
+                            <!--Aquí irá el contenido de nuestro modal que se crea en recipes.js al llamar a showModalRecipe()-->
+                        </div>
+                        
+                        <div class="row justify-content-md-center">
+                            <div class="col col-sm-6">
+                                <button class="btn btn-primary" onclick="addIngredientAddRecipe()" id="addIngredient">Add ingredient </button>
+                            </div>
+                            <div class="col col-sm-6">
+                                <button class="btn btn-primary" onclick="removeIngredientAddRecipe()" id="removeIngredient">Remove ingredient </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addRecipe()">Create recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal que muestra receetas -->
+        <div class="modal fade" id="showRecipes" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Show recipes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body" id="containerModalShowRecipes">
+                        <div class="container-fluid" id="containerModalRecipes">
+                            <!--Aquí irá el contenido de nuestro modal que se crea en recipes.js al llamar a showRecipes()-->
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para modificar recetas -->
+        <div class="modal fade" id="editRecipe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Edit recipes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body" id="modalRecipe">
+                        <div class="container-fluid" id="containerModalEditRecipe">
+                            <!--Aquí irá el contenido de nuestro modal que se crea en recipes.js al llamar a showModalRecipe()-->
+                        </div>
+                        
+                        <div class="row justify-content-md-center">
+                            <div class="col col-sm-6">
+                                <button class="btn btn-primary" onclick="addIngredientEditRecipe()" id="addIngredient">Add ingredient </button>
+                            </div>
+                            <div class="col col-sm-6">
+                                <button class="btn btn-primary" onclick="removeIngredientEditRecipe()" id="removeIngredient">Remove ingredient </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="updateRecipe()">Update recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>

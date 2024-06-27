@@ -1,0 +1,16 @@
+.error {
+    background-color: red;
+}
+#mensaje {
+    color: red;
+}
+#datas {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+body {
+    background-color: #f0f2f5;
+}

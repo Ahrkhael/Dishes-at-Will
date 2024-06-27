@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+}
+#pageLoaded {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -40px;
+}
+#windowRecipes {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    bottom: 20%;
+    right: 20%;
+    position: absolute;
+    display: grid;
+    background-color: #4551ad;
+    visibility: hidden;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px blue;
+}
+#recipes {
+    position: relative;
+    margin: 0 auto;
+}
+
+#calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+}
+#calendar table {
+    width: 100%;
+    border: 1px solid blue;
+}
+#calendar th, td {
+    width: 12.5%;
+    height: 100px;
+    background-color: #5096ae;
+    border: 1px solid blue;
+}
+.table th, tr{
+    text-align: center;
+}
+#containerModalShowRecipes td {
+    background-color: whitesmoke;
+}
+#buttonsCalendarContainer {
+	display: flex;
+	justify-content: center;
+}
+.divButtons {
+	margin-right: 100px;
+}
+.divButtons:last-child {
+	margin-right: 0px;
+}

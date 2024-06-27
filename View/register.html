@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Register</title>
+    <link rel="stylesheet" href="register.css">
+	<script src="../Controller/register.js"></script>
+</head>
+
+<body>
+
+    <div id = "datas">
+        <label>User: </label>
+        <input type="text" id="username" placeholder="Username">
+        <br>
+        <label>Email: </label>
+        <input type="email" id="email" placeholder="example@example.com">
+        <br>
+        <label>Password: </label>
+        <input type="password" id="pass" placeholder="********">
+        <br>
+        <label>Repeat password: </label>
+        <input type="password" id="confirmPass" placeholder="********">
+        <br>
+        <p id="mensaje"></p>
+        <button onclick="register()">Register</button>
+        <a href="index.html" style="justify-content: center; display: grid;">Back</a>
+    </div>
+
+</body>

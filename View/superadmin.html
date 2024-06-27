@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Superadmin</title>
+	<link rel="stylesheet" href="superadmin.css">
+	<script src="../Controller/superadmin.js"></script>
+</head>
+
+<body onload="checkSession(); getUsers();">
+
+	<div id="pageLoaded">
+		<h1>Welcome, superadmin</h1>
+		<br>
+		<div class="table-responsive table-fixed">
+			<table class="table" id="table-users">
+
+			</table>
+		</div>
+		<br>
+		<button onclick="closeSession()">Close session</button>
+	</div>
+
+</body>

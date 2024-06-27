@@ -1,0 +1,15 @@
+#pageLoaded {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    width: 100%;
+}
+th, td {
+    font-size: 22px;
+    border: 1px solid black;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
